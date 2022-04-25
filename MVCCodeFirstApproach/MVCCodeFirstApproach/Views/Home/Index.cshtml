@@ -1,0 +1,62 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width-device-width" />
+    <title>FootBall League</title>
+</head>
+<body style="background-color:#9acd32;">
+    <center>
+        <h1><font color="#00008d">FootBall League</font></h1>
+        <h3><font color="#00008d">Add Match Data</font></h3>
+    </center>
+    <div>
+        <form action="/Home/Index" method="post">
+            <center>
+                <table height="300" width="300">
+                    <tr>
+                        <td>MatchID</td>
+                        <td><input type="text" name="MatchID" /></td>
+                    </tr>
+                    <tr>
+                        <td>TeamName1</td>
+                        <td><input type="text" name="TeamName1" /></td>
+                    </tr>
+                    <tr>
+                        <td>TeamName2</td>
+                        <td><input type="text" name="TeamName2" /></td>
+                    </tr>
+                    <tr>
+                        <td>Status</td>
+                        <td>
+                            <select class="form-control" id="Status" name="Status">
+                                <option>Select</option>
+                                <option value="Win">Win</option>
+                                <option value="Draw">Draw</option>
+                            </select>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>WinningTeam</td>
+                        <td><input type="text" name="WinningTeam" /></td>
+                    </tr>
+                    <tr>
+                        <td>Points</td>
+                        <td><input type="text" name="Points" /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center"><input type="submit" value="Save Match Data" /></td>
+                    </tr>
+                </table>
+                @ViewBag.result
+            </center>
+        </form>
+    </div>
+</body>
+</html>
